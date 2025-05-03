@@ -1,34 +1,22 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Блог</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="header">
-    <h1 class="header__title">Мій Блог</h1>
-    <form id="search-form" class="search-form">
-      <input type="text" id="search-input" class="search-form__input" placeholder="Пошук постів...">
-      <button type="submit" class="search-form__button">Шукати</button>
+  <div class="container">
+    <h1>Мій Блог</h1>
+    <form class="form">
+      <input type="text" class="form-title" placeholder="Заголовок" required />
+      <textarea class="form-text" placeholder="Текст поста" required></textarea>
+      <button type="submit">Додати пост</button>
     </form>
-  </header>
 
-  <main class="main">
-    <section id="posts-container" class="posts-container">
-     
-    </section>
-
-    <section id="new-post" class="new-post">
-      <h2 class="new-post__title">Створити новий пост</h2>
-      <form id="post-form" class="post-form">
-        <input type="text" id="title" class="post-form__input" placeholder="Назва поста" required>
-        <textarea id="body" class="post-form__textarea" placeholder="Текст поста" required></textarea>
-        <button type="submit" class="post-form__button">Опублікувати</button>
-      </form>
-    </section>
-  </main>
+    <ul class="posts"></ul>
+  </div>
 
   <script src="main.js"></script>
 </body>
