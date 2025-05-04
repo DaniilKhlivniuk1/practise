@@ -1,8 +1,8 @@
 body {
-  font-family: Arial, sans-serif;
+  background: #fff1fe;
   margin: 0;
   padding: 0;
-  background: #fff1fe;
+  font-family: Arial, sans-serif;
 }
 
 .container {
@@ -18,44 +18,43 @@ h1 {
 
 .form {
   background: #fff;
-  padding: 1rem;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
   margin-bottom: 2rem;
+  padding: 1rem;
+  box-shadow: 0 0 10px #0000001a;
 }
 
-.form-title,
-.form-text {
-  display: block;
-  width: 100%;
-  margin-bottom: 1rem;
-  padding: 0.5rem;
-  font-size: 1rem;
+.form-title, .form-text {
   border: 1px solid #ccc;
   border-radius: 5px;
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: .5rem;
+  font-size: 1rem;
+  display: block;
 }
 
 .form button {
-  padding: 0.6rem 1.2rem;
-  font-size: 1rem;
+  color: #fff;
+  cursor: pointer;
   background-color: #518182;
-  color: white;
   border: none;
   border-radius: 5px;
-  cursor: pointer;
+  padding: .6rem 1.2rem;
+  font-size: 1rem;
 }
 
 .posts {
-  list-style: none;
   padding: 0;
+  list-style: none;
 }
 
 .posts li {
   background: #fff;
-  padding: 1rem;
-  margin-bottom: 1rem;
   border-radius: 5px;
-  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  margin-bottom: 1rem;
+  padding: 1rem;
+  box-shadow: 0 0 5px #0000001a;
 }
 
 .posts h3 {
@@ -63,15 +62,16 @@ h1 {
 }
 
 .posts p {
-  margin: 0.5rem 0;
+  margin: .5rem 0;
 }
 
 .posts button {
-  background-color: #ffd1d1;
   color: #333;
-  border: none;
-  padding: 0.4rem 0.8rem;
-  border-radius: 4px;
   cursor: pointer;
-  margin-right: 0.5rem;
+  background-color: #ffd1d1;
+  border: none;
+  border-radius: 4px;
+  margin-right: .5rem;
+  padding: .4rem .8rem;
 }
+/*# sourceMappingURL=practise.2cdaf7bc.css.map */
