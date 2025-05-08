@@ -60,5 +60,29 @@ postsList.addEventListener('click', async (e)=>{
     }
 });
 getPosts();
+let commentPage = 1;
+const commentsPerPage = 5;
+async function loadExternalComments() {
+    try {
+        const res = await fetch(`https://jsonplaceholder.typicode.com/comments?_page=${commentPage}&_limit=${commentsPerPage}`);
+        const comments = await res.json();
+        const commentsList = document.querySelector('.external-comments');
+        comments.forEach((comment)=>{
+            const li = document.createElement('li');
+            li.className = 'comment-item';
+            li.innerHTML = `
+        <h4>${comment.name}</h4>
+        <p><em>${comment.email}</em></p>
+        <p>${comment.body}</p>
+      `;
+            commentsList.appendChild(li);
+        });
+        commentPage++;
+    } catch (error) {
+        console.error('Error loading external comments:', error);
+    }
+}
+document.querySelector('.load-more-btn').addEventListener('click', loadExternalComments);
+loadExternalComments();
 
 //# sourceMappingURL=practise.de158e3a.js.map

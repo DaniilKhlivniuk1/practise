@@ -74,4 +74,46 @@ h1 {
   margin-right: .5rem;
   padding: .4rem .8rem;
 }
+
+.comments-section {
+  background: #fff;
+  border-radius: 5px;
+  margin-top: 3rem;
+  padding: 1rem;
+}
+
+.external-comments {
+  margin: 1rem 0;
+  padding: 0;
+  list-style: none;
+}
+
+.comment-item {
+  border-bottom: 1px solid #ccc;
+  padding: 1rem 0;
+}
+
+.comment-item h4 {
+  color: #333;
+  margin: 0 0 .5rem;
+  font-size: 1.1rem;
+}
+
+.comment-item p {
+  margin: .2rem 0;
+}
+
+.load-more-btn {
+  color: #fff;
+  cursor: pointer;
+  background-color: #f88;
+  border: none;
+  border-radius: 5px;
+  padding: .5rem 1rem;
+  transition: background .3s;
+}
+
+.load-more-btn:hover {
+  background-color: #f55;
+}
 /*# sourceMappingURL=practise.2cdaf7bc.css.map */
