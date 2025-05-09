@@ -3,25 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Блог</title>
+  <title>Мініпроєкт</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
-    <h1>Мій Блог</h1>
-    <form class="form">
-      <input type="text" class="form-title" placeholder="Заголовок" required />
-      <textarea class="form-text" placeholder="Текст поста" required></textarea>
-      <button type="submit">Додати пост</button>
-    </form>
+  <h1>Мій блог</h1>
 
-    <ul class="posts"></ul>
-  </div>
-  <div class="comments-section">
-    <h2>Other people's comments</h2>
-    <ul class="external-comments"></ul>
-    <button class="load-more-btn">Load more comments</button>
-  </div>
+  <form class="form">
+    <input type="text" class="form-title" placeholder="Заголовок поста" required />
+    <textarea class="form-text" placeholder="Текст поста" required></textarea>
+    <button type="submit">Додати пост</button>
+  </form>
+
+  <ul class="posts"></ul>
+
+  <h2>Інші коментарі</h2>
+  <ul class="external-comments"></ul>
+  <button class="load-more-btn">Завантажити ще коментарі</button>
 
   <script src="main.js"></script>
 </body>
