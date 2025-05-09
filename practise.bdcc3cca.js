@@ -1,0 +1,10 @@
+let baseUrl="https://680dfedbc47cb8074d91bfe7.mockapi.io/ap/post/comments",form=document.querySelector(".form"),titleInput=document.querySelector(".form-title"),textInput=document.querySelector(".form-text"),postList=document.querySelector(".posts");async function getPosts(){try{let t=await fetch(baseUrl),e=await t.json();postList.innerHTML="",e.forEach(renderPost)}catch(t){console.error("Помилка при завантаженні постів:",t)}}function renderPost(t){let e=document.createElement("li");e.className="post",e.innerHTML=`
+    <h3 class="post-title">${t.title}</h3>
+    <p class="post-text">${t.text}</p>
+    <button class="btn-delete" data-id="${t.id}">\u{412}\u{438}\u{434}\u{430}\u{43B}\u{438}\u{442}\u{438}</button>
+  `,postList.appendChild(e)}form.addEventListener("submit",async t=>{t.preventDefault();let e=titleInput.value.trim(),o=textInput.value.trim();if(e&&o)try{let t=await fetch(baseUrl,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({title:e,text:o})}),n=await t.json();renderPost(n),form.reset()}catch(t){console.error("Помилка при створенні поста:",t)}}),postList.addEventListener("click",async t=>{if(t.target.classList.contains("btn-delete")){let e=t.target.dataset.id;try{await fetch(`${baseUrl}/${e}`,{method:"DELETE"}),t.target.closest(".post").remove()}catch(t){console.error("Помилка при видаленні поста:",t)}}}),getPosts();let commentPage=1,commentsPerPage=5;async function loadComments(){try{let t=await fetch(`https://jsonplaceholder.typicode.com/comments?_page=${commentPage}&_limit=5`),e=await t.json(),o=document.querySelector(".external-comments");e.forEach(t=>{let e=document.createElement("li");e.className="comment-item",e.innerHTML=`
+        <h4>${t.name}</h4>
+        <p><em>${t.email}</em></p>
+        <p>${t.body}</p>
+      `,o.appendChild(e)}),commentPage++}catch(t){console.error("Помилка при завантаженні коментарів:",t)}}document.querySelector(".load-more-btn").addEventListener("click",loadComments),loadComments();
+//# sourceMappingURL=practise.bdcc3cca.js.map
